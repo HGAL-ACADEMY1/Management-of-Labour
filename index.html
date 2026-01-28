@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management of 2nd, 3rd, and 4th Stage of Labour</title>
+    
+    <!-- Google Fonts: Merriweather for the main text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Custom Scrollbar Hide */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #444; 
+            border-radius: 4px;
+        }
+
+        /* Typography Override */
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #121212; /* Deep Charcoal */
+            color: #e5e5e5; /* Soft White */
+            overflow-x: hidden;
+        }
+
+        /* Animation Utility Classes */
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-text.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Progress Bar */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            z-index: 50;
+        }
+        #progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Highlighted text accents */
+        .accent {
+            color: #93c5fd; /* Soft Blue */
+            font-weight: 700;
+        }
+        
+        .warning {
+            color: #fca5a5; /* Soft Red */
+            font-weight: 700;
+        }
+
+        .concept {
+            color: #86efac; /* Soft Green */
+            border-bottom: 2px solid rgba(134, 239, 172, 0.3);
+        }
+
+        /* Button Pulse */
+        @keyframes gentle-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); transform: scale(1); }
+            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); transform: scale(1.02); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); transform: scale(1); }
+        }
+        
+        .btn-pulse {
+            animation: gentle-pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen selection:bg-blue-500 selection:text-white pb-20">
+
+    <!-- Scroll Progress Bar -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="max-w-3xl mx-auto px-6 pt-12">
+
+        <!-- LOGO SECTION -->
+        <div class="flex justify-center mb-16 reveal-text">
+            <img src="https://i.imgur.com/eP0BFrd.png" 
+                 alt="HGAL Academy Logo" 
+                 class="w-full max-w-[400px] h-auto object-contain drop-shadow-2xl">
+        </div>
+
+        <!-- INTRO -->
+        <div class="space-y-8 text-[22px] md:text-[26px] leading-[1.8] text-gray-200">
+            
+            <p class="reveal-text">
+                Hello class! 👋 Welcome to today's session. Get comfortable, because today we are going to walk through the journey of birth. 
+            </p>
+
+            <p class="reveal-text">
+                Specifically, we are going to look at the <span class="accent">Management of the 2nd, 3rd, and 4th Stages of Labour</span>. 🏥
+            </p>
+
+            <p class="reveal-text">
+                Imagine you are the captain of a ship navigating through a storm. That is what a midwife does during these stages. We need to be calm, observant, and ready to act. ⚓️
+            </p>
+
+            <p class="reveal-text">
+                So, let’s dive right in!
+            </p>
+
+            <!-- PART 1: 2nd STAGE -->
+            <p class="reveal-text mt-12 text-3xl font-bold text-white border-l-4 border-blue-500 pl-4">
+                1. Signs of the Second Stage of Labour
+            </p>
+
+            <p class="reveal-text">
+                First things first. How do we even know a woman has reached the <span class="concept">Second Stage</span>? It’s not a guessing game! 🕵️‍♀️
+            </p>
+
+            <p class="reveal-text">
+                Here are the clear signs and symptoms you will observe:
+            </p>
+
+            <p class="reveal-text">
+                🔹 <strong>On Vaginal Examination:</strong> The cervix (the door to the uterus) is <span class="accent">fully dilated</span>. It’s completely open!
+            </p>
+
+            <p class="reveal-text">
+                🔹 <strong>Contractions change:</strong> They become <span class="accent">Expulsive</span>. The uterus is pushing hard now.
+            </p>
+
+            <p class="reveal-text">
+                🔹 <strong>Waterworks:</strong> You might see a trickling of blood or the rupture of membranes (the water breaks). 💦
+            </p>
+
+            <p class="reveal-text">
+                🔹 <strong>Physical Changes:</strong> 
+                <br>• There is tenseness between the coccyx (tailbone) and the anus.
+                <br>• The Vulva gapes open.
+                <br>• The Anus pouts and gapes (imagine a flower opening... sort of). 🌸
+                <br>• The Perineum stretches and bulges out.
+            </p>
+
+            <p class="reveal-text">
+                🔹 <strong>The Baby:</strong> The presenting part (usually the head) becomes visible! We call this "crowning" when it stays visible. 👶
+            </p>
+
+            <p class="reveal-text">
+                🔹 <strong>The Mom:</strong> She feels an uncontrollable <span class="accent">Urge to push</span>. Her body is taking over.
+            </p>
+
+            <p class="reveal-text border-t border-gray-700 pt-6">
+                Okay, let’s now move on to what <strong>WE</strong> do during this time...
+            </p>
+
+            <!-- PART 2: ACTIVE MANAGEMENT -->
+            <p class="reveal-text mt-12 text-3xl font-bold text-white border-l-4 border-purple-500 pl-4">
+                2. Active Management
+            </p>
+
+            <p class="reveal-text">
+                We don't just stand there watching! Here is the step-by-step plan. 📋
+            </p>
+
+            <p class="reveal-text">
+                First, the patient should be transferred to the delivery room (second stage room) or, if she is staying put, she should lie on her bed comfortably. 
+            </p>
+
+            <p class="reveal-text">
+                🚨 <span class="warning">CRITICAL RULE:</span> She should <strong>never</strong> be left alone.
+            </p>
+
+            <p class="reveal-text">
+                We perform a Vaginal Examination to confirm that the cervix is indeed fully dilated. The patient can lie in whatever position she finds most comfortable.
+            </p>
+
+            <p class="reveal-text">
+                ✂️ <strong>Breaking the waters:</strong> If the membranes are still intact (the water hasn't broken), we rupture them artificially using a pair of cockers or artery forceps.
+            </p>
+
+            <p class="reveal-text">
+                Now, we become detectives. We need to observe and record everything frequently between contractions:
+            </p>
+
+            <p class="reveal-text">
+                1️⃣ <strong>Uterine contractions:</strong> Are they strong? Regular?
+                <br>2️⃣ <strong>Descent:</strong> Is the baby moving down?
+                <br>3️⃣ <strong>Mom's Pulse:</strong> Check every 5 – 15 minutes. 💓
+                <br>4️⃣ <strong>Baby's Heart (FHR):</strong> Check every 5 minutes.
+            </p>
+
+            <p class="reveal-text text-gray-400 italic text-[20px]">
+                (Note: Any irregularity in the baby's heart rate must be reported immediately! The baby might be getting less oxygen due to head or cord compression.)
+            </p>
+
+            <p class="reveal-text">
+                Let's talk about the <strong>Bladder</strong>. 🚽
+                <br>The bladder must be kept empty! We catheterize at the end of the first stage or beginning of the second stage if it's full. Why?
+            </p>
+
+            <p class="reveal-text">
+                Because a full bladder acts like a roadblock! 🚧 It can cause a delay in the head engaging and can even lead to <span class="warning">Post Partum Haemorrhage</span> (bleeding) later on.
+            </p>
+
+            <p class="reveal-text">
+                🥤 <strong>Food & Drink:</strong> Only a sip of glucose drink is allowed if things are taking a long time. We want to avoid vomiting.
+            </p>
+
+            <p class="reveal-text">
+                To keep her comfortable, we can sponge her face and hands with cool water. 🧖‍♀️
+            </p>
+
+            <p class="reveal-text">
+                <strong>Teamwork:</strong> Two nurses should do the delivery. One "clean" nurse (to catch the baby) and one assistant. 🤝
+            </p>
+
+            <p class="reveal-text">
+                We deliver the head <span class="accent">slowly</span>. Why slowly? To prevent tearing the perineum (that skin we talked about earlier).
+            </p>
+
+            <p class="reveal-text">
+                The woman should actually be discouraged from active pushing until the head is visible. Instead, she can practice breathing exercises: Rhythmic, easy breathing. Avoid shallow panting! We want very deep breathing. 🌬️
+            </p>
+
+            <p class="reveal-text">
+                And tell her: <strong>Feel free to express yourself!</strong> Cry, shout, make noise. It helps her cope. 🗣️
+            </p>
+
+            <p class="reveal-text border-t border-gray-700 pt-6">
+                Now that we understand the actions, let’s talk about positions...
+            </p>
+
+            <!-- PART 3: POSITIONS & DELIVERY -->
+            <p class="reveal-text mt-12 text-3xl font-bold text-white border-l-4 border-green-500 pl-4">
+                3. Positions & Methods of Delivery
+            </p>
+
+            <p class="reveal-text">
+                The position depends on the mom, the baby, the environment, and the midwife's confidence.
+            </p>
+
+            <p class="reveal-text">
+                Common positions include: Dorsal (on back), Left lateral (on side), Squatting, Kneeling, Standing, or using a birthing chair. 🪑
+            </p>
+
+            <p class="reveal-text">
+                Let's dive into the two most common ones:
+            </p>
+
+            <p class="reveal-text">
+                🛌 <strong>A. The Dorsal Position (Lying on Back)</strong>
+            </p>
+
+            <p class="reveal-text">
+                This has many advantages:
+                <br>✅ The woman can push effectively.
+                <br>✅ She can rest between contractions.
+                <br>✅ We can easily see her abdomen and face to check for distress.
+                <br>✅ No need to move her for the next stage.
+                <br>✅ Clear view of the perineum.
+            </p>
+
+            <p class="reveal-text">
+                <strong>How it works:</strong>
+                <br>The woman lies on her back with knees flexed and wide apart.
+            </p>
+
+            <p class="reveal-text">
+                <strong>The Delivery Steps:</strong>
+                <br>1. As soon as the head is out, we swab the eyes with sterile water (inner corner to outer corner). 👁️
+                <br>2. Clear the nose and mouth of mucus.
+                <br>3. <span class="warning">Check the neck!</span> Feel for the umbilical cord (Nuchal cord).
+            </p>
+
+            <p class="reveal-text ml-6 border-l-2 border-gray-600 pl-4 text-[20px] italic text-gray-400">
+                👉 If the cord is loose: Slip it over the baby's shoulder.<br>
+                👉 If the cord is tight: Double clamp it and cut it immediately.
+            </p>
+
+            <p class="reveal-text">
+                4. Wait for <strong>External Rotation</strong>. This is when the baby's head turns naturally. It tells us the shoulders are ready inside.
+                <br>5. We apply gentle downward traction (pull) to free the top shoulder (anterior) from under the pubic bone.
+                <br>6. Then we lift the head UP to deliver the bottom shoulder (posterior).
+            </p>
+
+            <p class="reveal-text">
+                To help the rest of the body out, the midwife grasps around the chest and uses lateral flexion (bending sideways) to guide the baby towards the mom's tummy.
+            </p>
+
+            <p class="reveal-text">
+                ⏰ <strong>Check the time immediately!</strong>
+            </p>
+
+            <p class="reveal-text">
+                Hold the baby upside down or at a 45-degree angle to drain fluid from the lungs. Then, lay the baby between the mother's legs.
+            </p>
+
+            <p class="reveal-text">
+                Suction the nose and mouth again if needed. Clamp and cut the cord.
+            </p>
+
+            <p class="reveal-text">
+                Finally, we do the <span class="accent">APGAR Score</span> (a health check) at 1 minute and 5 minutes. Show the baby to mom so she knows the sex, put an ID band on, wipe the baby, wrap in a warm towel, and keep them cozy! 🤱
+            </p>
+
+            <p class="reveal-text pt-8">
+                🛌 <strong>B. Left Lateral Position (Lying on Side)</strong>
+            </p>
+
+            <p class="reveal-text">
+                Here, the woman lies on her left side with buttocks at the edge of the bed.
+            </p>
+
+            <p class="reveal-text">
+                The midwife stands behind the patient. An assistant raises the mom's leg so the midwife can pass her hand between the thighs. The actual delivery steps are the same as above!
+            </p>
+
+            <p class="reveal-text border-t border-gray-700 pt-6">
+                Next, we’ll look at what happens <em>after</em> the baby is born...
+            </p>
+
+            <!-- PART 4: THIRD STAGE -->
+            <p class="reveal-text mt-12 text-3xl font-bold text-white border-l-4 border-yellow-500 pl-4">
+                4. Management of the Third Stage
+            </p>
+
+            <p class="reveal-text">
+                The baby is out, but the work isn't done. The uterus rests for a few minutes, then starts contracting again to push out the placenta (the afterbirth).
+            </p>
+
+            <p class="reveal-text">
+                While the placenta separates, there might be slight blood loss. We must watch the woman closely! 👀
+            </p>
+
+            <p class="reveal-text">
+                The midwife places her left hand on the uterus. It should feel hard like a <strong>cricket ball</strong> 🏏. That means it's contracting well to stop bleeding. 
+            </p>
+
+            <p class="reveal-text">
+                ⚠️ <strong>Note:</strong> Don't meddle with or massage the uterus yet. Just feel it. We maintain strict hygiene (Asepsis) here.
+            </p>
+
+            <p class="reveal-text">
+                <strong>How do we know the placenta has separated?</strong>
+                <br>1. The cord lengthens.
+                <br>2. The uterus becomes harder and mobile.
+                <br>3. A small gush of blood appears. 🩸
+                <br>4. The Fundus (top of uterus) rises up in the belly.
+            </p>
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-2xl">
+                Methods of Delivering the Placenta
+            </p>
+
+            <p class="reveal-text">
+                At this point, it’s important to consider which method to use. We have three main ones:
+            </p>
+
+            <div class="reveal-text bg-[#1f1f1f] p-6 rounded-2xl mb-6 shadow-lg border border-gray-800">
+                <p class="text-xl font-bold text-blue-400 mb-2">Method 1: Controlled Cord Traction (CCT)</p>
+                <p>
+                    This is the most common method today. Why? It reduces the risk of heavy bleeding (haemorrhage) and makes this stage shorter.
+                </p>
+                <p class="mt-4">
+                    💉 <strong>The Drug:</strong> We give Syntometrine 2ml (contains Oxytocin + Ergometrine) right when the baby's anterior shoulder is born.
+                </p>
+                <p class="mt-4">
+                    <strong>The Move:</strong> We apply downward and outward traction (pulling) on the cord with one hand. The other hand pushes the uterus BACKWARDS (counter-traction) to keep it in place.
+                </p>
+                <p class="mt-4 text-red-300 italic">
+                    ⚠️ <strong>Warning:</strong> Never pull without bracing the uterus back, or you might turn the uterus inside out (Inversion)!
+                </p>
+                <p class="mt-4 text-gray-400 text-sm">
+                    Contraindications: Do not use this method for Preterm babies or if the foetus was macerated.
+                </p>
+            </div>
+
+            <div class="reveal-text bg-[#1f1f1f] p-6 rounded-2xl mb-6 shadow-lg border border-gray-800">
+                <p class="text-xl font-bold text-green-400 mb-2">Method 2: Fundal Pressure</p>
+                <p>
+                    Here, the placenta must already be separated. The woman relaxes her tummy muscles by breathing through her mouth. 😲
+                </p>
+                <p class="mt-4">
+                    We use the hard, contracted uterus like a piston in a syringe to push the placenta out.
+                </p>
+                <p class="mt-4">
+                    The midwife puts her hand behind the uterus and thumb in front, pushing down and back towards the outlet. Catch the placenta at the bottom! Then give Ergometrine 0.5mg.
+                </p>
+            </div>
+
+            <div class="reveal-text bg-[#1f1f1f] p-6 rounded-2xl mb-6 shadow-lg border border-gray-800">
+                <p class="text-xl font-bold text-yellow-400 mb-2">Method 3: Maternal Effort</p>
+                <p>
+                    Once the placenta separates, we just ask the mom to push again! Just like she did for the baby.
+                </p>
+                <p class="mt-4">
+                    We catch the placenta in cupped hands and twist the membranes into a rope so they don't tear inside. 🌪️
+                </p>
+            </div>
+
+            <p class="reveal-text">
+                There is also the <strong>Brandt Andrews manoeuvre</strong>: One hand pushes up on the uterus while the other pulls gently on the cord. It's safe if done correctly!
+            </p>
+
+            <p class="reveal-text border-t border-gray-700 pt-6">
+                Now that we have successfully delivered the baby and the placenta, we need to make sure the mother is repaired and comfortable. This brings us to a very important topic...
+            </p>
+
+            <!-- PART 5: CARE AFTER DELIVERY (EPISIOTOMY) -->
+            <p class="reveal-text mt-12 text-3xl font-bold text-white border-l-4 border-red-500 pl-4">
+                5. Care After Delivery of the Placenta: Episiotomy
+            </p>
+
+            <p class="reveal-text">
+                Sometimes, the "door" (the vaginal opening) isn't quite wide enough for the baby to pass through safely. In these cases, we perform an <span class="concept">Episiotomy</span>.
+            </p>
+
+            <p class="reveal-text">
+                <strong>What is it?</strong>
+                <br>An episiotomy is a deliberate surgical cut (incision) made into the perineum to enlarge the vaginal opening. It is a planned surgery, but often it becomes an emergency decision because we might not know we need it until the second stage of labour. 🔪
+            </p>
+
+            <p class="reveal-text">
+                <strong>Why do we do it? (Indications)</strong>
+                <br>We don't just do it for fun! We do it to:
+                <br>• Minimize severe tearing that happens naturally.
+                <br>• Speed up the birth if there is a delay (e.g., rigid perineum or a big baby).
+                <br>• Help if the baby is in an abnormal position (like Face to Pubes).
+                <br>• Assist if there is <span class="warning">Foetal Distress</span> (like a prolapsed cord).
+                <br>• Protect a <strong>Preterm Baby</strong> (their heads are soft and need an easy exit to avoid brain damage). 🧠
+                <br>• Help with instrument deliveries (Forceps or Ventouse).
+            </p>
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-2xl">
+                Types of Episiotomy
+            </p>
+
+            <p class="reveal-text">
+                Imagine the perineum is a clock face. The type of cut depends on the direction.
+            </p>
+
+            <p class="reveal-text">
+                🔹 <strong>1. Media (Midline)</strong>
+                <br>This cut goes straight down from the center (6 o'clock) towards the anus, about 2.5cm long.
+                <br><em>Pros:</em> Less bleeding, easy to repair, heals well, comfy for mom.
+                <br><em>Cons:</em> 🚨 Dangerous! It can extend and tear right into the anus (3rd degree) or rectum (4th degree).
+            </p>
+
+            <p class="reveal-text">
+                🔹 <strong>2. Medio-Lateral (The Midwife's Choice)</strong>
+                <br>This incision starts at the center but goes diagonally to the right or left (think 5 o'clock or 7 o'clock). It goes about 4-5cm long at a 45-degree angle.
+                <br><em>Pros:</em> It avoids the anus! Safe from 3rd-degree tears. This is recommended for midwives and widely used in the UK. 🇬🇧
+                <br><em>Cons:</em> Harder to repair and causes more bleeding.
+            </p>
+
+            <p class="reveal-text">
+                🔹 <strong>3. J-Shaped (Schuchardt)</strong>
+                <br>Starts straight down for 2cm, then curves out to 7 o'clock. Used for very difficult deliveries (huge babies). It's hard to stitch up!
+            </p>
+
+            <p class="reveal-text">
+                🔹 <strong>4. Lateral</strong>
+                <br>Starts away from the center. 🚫 <strong>Abandoned!</strong> It causes profuse bleeding and hurts a lot. We don't use this anymore.
+            </p>
+
+            <p class="reveal-text border-t border-gray-700 pt-6">
+                Let's move on to the actual procedure...
+            </p>
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-2xl">
+                The Procedure: Timing is Everything! ⏱️
+            </p>
+
+            <p class="reveal-text">
+                <strong>When to cut:</strong> We cut when the presenting part (head) is stretching the tissue tight.
+                <br>👉 <em>Too early?</em> Lots of bleeding and it won't help the head.
+                <br>👉 <em>Too late?</em> The tear might have already happened!
+            </p>
+
+            <p class="reveal-text">
+                <strong>Infiltration (Numbing the area):</strong>
+                <br>We use Xylocaine or Lignocaine (0.5% or 1%).
+                <br>Clean the area. Insert two fingers to protect the baby's head. Insert the needle, withdraw slightly to check for blood (safety first!), then inject as you pull the needle out. Repeat in a fan shape. Wait 3-4 minutes for it to work! 💉
+            </p>
+
+            <p class="reveal-text">
+                <strong>Making the Incision:</strong>
+                <br>We use sharp blunt-ended scissors. Position the blades, wait for a contraction (when the skin is stretched thin), and make <strong>ONE single deliberate cut</strong>. Don't make small snips! A jagged edge is hard to sew.
+            </p>
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-2xl">
+                Repair of Episiotomy 🧵
+            </p>
+
+            <p class="reveal-text">
+                Once the baby and placenta are out, we must stitch the cut. Early suturing prevents infection (sepsis).
+            </p>
+
+            <p class="reveal-text">
+                <strong>The Setup:</strong>
+                <br>Mom lies on her back (Lithotomy or Dorsal). We pack the vagina with gauze to stop blood from obscuring our view. (Don't forget to remove this later!).
+            </p>
+
+            <p class="reveal-text">
+                <strong>The 3 Layers of Repair:</strong>
+                <br>An episiotomy is like a deep tear, so we close it in three layers:
+                <br>1️⃣ <strong>Vaginal Wall:</strong> We stitch from the top (apex) down to the opening.
+                <br>2️⃣ <strong>Muscle Layer:</strong> We stitch the pelvic floor muscles and perineal body.
+                <br>3️⃣ <strong>Skin:</strong> Finally, we close the skin.
+            </p>
+
+            <p class="reveal-text">
+                <strong>Material:</strong> We prefer <strong>Chromic Catgut (2-0 or 3-0)</strong>. Why? It's strong, flexible, and dissolves on its own (absorbable). Less pain for mom!
+            </p>
+
+            <p class="reveal-text">
+                <strong>Aftercare:</strong>
+                <br>Remove the vaginal pack. Put a gloved finger in the rectum to make sure you haven't stitched the anus by mistake! Clean her up, apply a sterile pad. Tell her to keep the area clean and dry.
+            </p>
+
+            <p class="reveal-text">
+                <strong>Summary of Advantages:</strong>
+                <br>✅ Prevents muscle over-stretching.
+                <br>✅ Reduces exhaustion.
+                <br>✅ Protects the baby's brain (less hypoxia).
+                <br>✅ Heals faster than a ragged, uncontrolled tear.
+            </p>
+
+            <p class="reveal-text border-t border-gray-700 pt-6">
+                Now, let's switch gears. Pregnancy isn't just about the big event; it comes with some discomforts. Let's look at how to manage them.
+            </p>
+
+            <!-- PART 6: MINOR DISORDERS -->
+            <p class="reveal-text mt-12 text-3xl font-bold text-white border-l-4 border-orange-500 pl-4">
+                6. Minor Disorders During Birth
+            </p>
+
+            <p class="reveal-text">
+                Even though these are called "minor," they can be very annoying for the mother! 😣
+            </p>
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-xl">
+                A. Constipation 💩
+            </p>
+
+            <p class="reveal-text">
+                <strong>Why it happens:</strong>
+                <br>Blame it on <span class="accent">Progesterone</span>! This hormone relaxes smooth muscles. It relaxes the uterus (good), but it also relaxes the intestines (bad). This slows down peristalsis (gut movement). Plus, the gut absorbs more water, making stools hard.
+            </p>
+
+            <p class="reveal-text">
+                <strong>Management:</strong>
+                <br>First, check her history. Is she taking iron supplements? Drinking enough water?
+            </p>
+
+            <p class="reveal-text">
+                🥗 <strong>Diet:</strong> Increase Fibre! Whole grains, beans, nuts, fruits. Aim for 18-30mg of fibre a day. But introduce it slowly to avoid bloating.
+                <br>💧 <strong>Fluids:</strong> Drink at least 2 liters a day. Avoid too much tea/coffee (diuretics).
+                <br>🏃‍♀️ <strong>Exercise:</strong> Light activity helps get the gut moving.
+            </p>
+
+            <p class="reveal-text">
+                💊 <strong>Meds (If diet fails):</strong>
+                <br>• <em>Bulking Agents (Fybogel):</em> Safe. Take 2-3 days to work.
+                <br>• <em>Osmotic (Lactulose):</em> Draws water into stool. Safe.
+                <br>• <em>Stimulants (Senna):</em> Use sparingly! Only if necessary.
+                <br>🚫 <strong>Avoid:</strong> Castor Oil! It can cause premature labour.
+            </p>
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-xl">
+                B. Gastro-Oesophageal Reflux (Heartburn) 🔥
+            </p>
+
+            <p class="reveal-text">
+                <strong>Why it happens:</strong>
+                <br>Again, Progesterone relaxes the valve (sphincter) between the stomach and throat. Acid splashes up! It burns the throat because the throat has no protective lining.
+            </p>
+
+            <p class="reveal-text">
+                <strong>Management:</strong>
+                <br>• Check for Pre-eclampsia first (BP and urine check) just to be safe.
+                <br>• Eat small, frequent meals.
+                <br>• Don't eat and drink at the same time (don't overfill the tank!).
+                <br>• Avoid spicy food, chocolate, coffee. ☕🍫
+                <br>• Don't eat 3 hours before bed.
+                <br>• <strong>Position:</strong> Sleep with the head elevated. Lie on the left side.
+                <br>• <strong>Meds:</strong> Simple antacids (magnesium or calcium based) are usually safe.
+            </p>
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-xl">
+                C. Varicose Veins and Leg Oedema 🦵
+            </p>
+
+            <p class="reveal-text">
+                <strong>Why it happens:</strong>
+                <br>Increased blood volume + Progesterone relaxing vein walls + pressure from the baby = Swollen veins and legs. It affects 40% of women!
+            </p>
+
+            <p class="reveal-text">
+                <strong>Management:</strong>
+                <br>The good news? It usually gets better 3-4 months after birth.
+                <br>For now:
+                <br>• Wear compression stockings.
+                <br>• Elevate the legs when resting.
+                <br>• Reflexology might help provide comfort.
+            </p>
+            
+            <p class="reveal-text font-bold text-blue-300 mt-4 mb-2">
+                More Non-Pharmacological Tricks:
+            </p>
+            <p class="reveal-text">
+                Here is a checklist of other things that help:
+                <br>🏊‍♀️ <strong>Water Therapy:</strong> Walking in chest-deep water (pool) or using cold compresses.
+                <br>🦶 <strong>Exercise:</strong> Ankle flexion exercises for 30 mins/day.
+                <br>👖 <strong>Clothing:</strong> Avoid tight clothes and high heels!
+                <br>🛌 <strong>Position:</strong> Lie on the <strong>Left Side</strong>. This takes the weight of the uterus off the Inferior Vena Cava (the big vein on the right side), helping blood flow.
+            </p>
+
+            <!-- NEW SECTIONS START HERE -->
+            
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-xl">
+                D. Haemorrhoids (Piles) 🍇
+            </p>
+
+            <p class="reveal-text">
+                This is very common. The extra blood volume causes veins to dilate and engorge. Plus, the heavy uterus causes "venous stasis" (blood slowing down).
+            </p>
+
+            <p class="reveal-text">
+                <strong>Conservative Management:</strong>
+                <br>• Prevent constipation! (High fibre + Fluids).
+                <br>• Stool softeners.
+                <br>• <strong>Don't strain!</strong> Try to go in the morning when the colon is most active.
+                <br>• Skin protection creams for itching.
+                <br>• <strong>Meds:</strong> Topical anaesthetics (like Rectinol) or corticosteroids can help, but use them for less than 7 days to avoid skin irritation.
+                <br>• Warmed baths 🛁 can decrease sphincter tone and improve congestion.
+            </p>
+
+            <p class="reveal-text">
+                <strong>Surgical:</strong> If it's really bad, a closed excision using local anaesthetic is safe during pregnancy.
+            </p>
+
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-xl">
+                E. Nausea and Vomiting 🤢
+            </p>
+
+            <p class="reveal-text">
+                Commonly known as "Morning Sickness," but it can happen anytime!
+                <br>📊 <strong>The Stats:</strong>
+                <br>• 50% of women have Nausea AND Vomiting.
+                <br>• 25% have just Nausea.
+                <br>• It peaks at 9 weeks.
+                <br>• Usually gone by 20 weeks.
+                <br>It correlates with the rise of the hCG hormone.
+            </p>
+
+            <p class="reveal-text">
+                🚨 <strong>Hyperemesis Gravidarum (HG):</strong>
+                <br>This is the severe form (happens to 0.3 - 1% of women). It involves persistent vomiting, weight loss (>5%), ketones in urine, and dehydration. These women need medical referral!
+            </p>
+
+            <p class="reveal-text">
+                <strong>Management & Assessment:</strong>
+                <br>We check urine for ketones (starvation sign), blood pressure, and signs of dehydration. We might check weight weekly.
+            </p>
+
+            <p class="reveal-text">
+                <strong>Interventions (Non-Drug):</strong>
+                <br>• Small, frequent meals (Snack attack!).
+                <br>• Bland, low fat, high protein.
+                <br>• Drink liquids separately from solids (don't overfill the stomach).
+                <br>• Eat dry crackers 🍘 before getting out of bed.
+                <br>• Ice chips or icy poles.
+                <br>• <strong>Ginger:</strong> (125-250mg) can help, but results are inconsistent. (Limit to 1g/day).
+                <br>• B6 Acupressure wristbands.
+            </p>
+
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-xl">
+                F. Pelvic Girdle Pain (PGP) & Low Back Pain 🦴
+            </p>
+
+            <p class="reveal-text">
+                Back pain is a classic pregnancy symptom. We must first exclude serious things like infections or trauma.
+            </p>
+
+            <p class="reveal-text">
+                <strong>Education & Management:</strong>
+                <br>• Avoid fatigue. Rest often!
+                <br>• Avoid twisting while lifting or bouncing.
+                <br>• <strong>Pillows are your best friend:</strong> Use them to support the tummy when lying on the side, or behind the back when sitting.
+                <br>• Massage, heat packs, or cold packs.
+                <br>• Hydrotherapy (water exercise).
+                <br>• Use a supportive <strong>Pregnancy Belt</strong>.
+                <br>• In severe cases, use crutches or walkers.
+            </p>
+
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-xl">
+                G. Carpal Tunnel Syndrome (CTS) 🖐️
+            </p>
+
+            <p class="reveal-text">
+                Ever heard of numb, tingling hands in pregnancy? That's CTS.
+                <br><strong>Why?</strong> Excess fluid (oedema) compresses the <strong>Median Nerve</strong> in the wrist. It's often worse at night.
+            </p>
+
+            <p class="reveal-text">
+                <strong>Risk Factors:</strong> Pre-eclampsia, hypertension, or excessive weight gain.
+            </p>
+
+            <p class="reveal-text">
+                <strong>Management:</strong>
+                <br>• Avoid extreme flexing of the wrist.
+                <br>• Avoid vibration (power tools, lawn mowing).
+                <br>• <strong>Wrist Splinting:</strong> Wearing a splint (especially at night) keeps the wrist neutral and relieves pressure.
+                <br>• Corticosteroid injections can help temporarily.
+                <br>Good news: It usually goes away 2 weeks after birth!
+            </p>
+
+
+            <p class="reveal-text mt-8 mb-4 font-bold text-white text-xl">
+                H. Leg Cramps 😫
+            </p>
+
+            <p class="reveal-text">
+                These painful spasms usually strike at night and affect up to 30% of women.
+                <br><strong>Theories on why:</strong>
+                <br>• Slowed blood flow (venous return).
+                <br>• Lack of minerals?
+                <br>• Build up of Lactic Acid in muscles.
+            </p>
+
+            <p class="reveal-text">
+                <strong>Management:</strong>
+                <br>• Check calcium and magnesium levels. (Calcium supplements haven't been proven to help much, but <strong>Magnesium</strong> might!).
+                <br>• <strong>Immediate relief:</strong> Massage, walk, stretch the calf!
+                <br>• Warm bath before bed.
+                <br>• Drink water.
+            </p>
+
+            <p class="reveal-text bg-[#1f1f1f] p-4 rounded-lg border-l-4 border-blue-400">
+                💊 <strong>Magnesium Supplement Dosage:</strong>
+                <br>Magnesium Lactate or Citrate:
+                <br>• 5mmol in the morning
+                <br>• 10mmol in the evening
+                <br>(Example medication: MagMin 500mg tablets).
+            </p>
+
+
+            <p class="reveal-text mt-12 mb-12 italic text-center text-gray-400">
+                And that, class, brings us to the end of our journey through labour and immediate care! 🏁
+            </p>
+
+        </div>
+
+        <!-- CONTINUOUS VIP NOTICE -->
+        <div class="reveal-text mt-16 pb-24 text-center border-t border-dashed border-gray-700 pt-10">
+            <p class="text-[24px] mb-4 text-yellow-100">
+                🌟 Join our <span class="text-yellow-400 font-bold">VIP</span> if you're yet to!
+            </p>
+            <p class="text-[20px] text-gray-300 mb-8">
+                Get more study materials and other bonuses (worth #115,000). For more details click below:
+            </p>
+            
+            <div class="text-4xl mb-6 animate-bounce">👇</div>
+
+            <a href="https://tinyurl.com/2dbtvx2b" target="_blank" 
+               class="btn-pulse inline-block bg-gradient-to-r from-blue-600 to-blue-400 text-white font-bold py-4 px-12 rounded-full text-2xl hover:from-blue-500 hover:to-blue-300 transition-all transform hover:-translate-y-1 shadow-xl">
+                Click Here
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Custom Scripts for Interaction -->
+    <script>
+        // 1. Scroll Progress Bar Logic
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        // 2. Intersection Observer for Text Pop Effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Stop observing once revealed for performance
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.reveal-text');
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+              </html>
